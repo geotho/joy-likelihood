@@ -2,31 +2,29 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Headwear and Sorrow</title>
-	<style type="text/css">
-		body { font-family: Helvetica, sans-serif; }
-		h2, h3 { margin-top:0; }
-		form { margin-top: 15px; }
-		form > input { margin-right: 15px; }
-		#results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
-	</style>
+	<title>joyLikelihood</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-	<div id="results">Your captured image will appear here...</div>
+	<div class="container">
+		<h1>joyLikelihood</h1>
+		<h3>Charting mood throughout the day</h3>
+		<p>To begin, enter your Google Vision API key here: <input type="text" id="api_key" placeholder="API key"></p>
+		<div id="my_camera"></div>
 
-	<h1>Headwear and Sorrow</h1>
-	<h3>Charting mood throughout the day</h3>
+		<script type="text/javascript" src="build/webcam.js"></script>
+		<script type="text/javascript" src="build/apikey.js"></script>
+		<script type="text/javascript" src="build/script.js"></script>
 
-	<div id="my_camera"></div>
+		<!-- A button for taking snaps -->
+		<form>
+			<input type="button" value="Take Large Snapshot" onClick="take_snapshot()">
+		</form>
 
-	<script type="text/javascript" src="build/webcam.js"></script>
-	<script type="text/javascript" src="build/apikey.js"></script>
-	<script type="text/javascript" src="build/script.js"></script>
-
-	<!-- A button for taking snaps -->
-	<form>
-		<input type=button value="Take Large Snapshot" onClick="take_snapshot()">
-	</form>
-
+		<div id="results_table" class="col-sm-12">
+			<div class="row col-sm-12">
+			</div>
+		</div>
+	</div>
 </body>
 </html>
